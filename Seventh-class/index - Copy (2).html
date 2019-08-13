@@ -1,0 +1,124 @@
+<html>
+<head>
+
+
+	<style>
+    
+	*{
+	
+	margin:0px;
+	padding:0px	
+		
+	}
+	
+	.box
+	{
+		
+		width:300px;
+		padding:20px;
+		margin:100px auto;
+		border:1px solid #ccc
+			
+		
+	}
+	
+	.box p input[type=text], .box p input[type=password], .box p input[type=email]{width:95%; padding:10px; margin-bottom:5px}
+	.box p span{padding-left:5px; font-size:11px; display:block; margin-bottom:10px}
+    </style>
+
+</head>
+
+
+<body>
+
+
+	
+		<div class="box">
+        
+            <p>
+				<input type="text" id="txt_name" placeholder="Name"/><span id="msg_name"></span>                
+            </p>
+            
+            <p>
+				<input type="email" id="txt_email" placeholder="Email"/><span id="msg_email"></span>                
+            </p>
+            
+            <p>
+				<input type="password" id="txt_password" placeholder="Password"/><span id="msg_password"></span>                
+            </p>
+            
+            <p>
+				<input type="text" id="txt_phone"  placeholder="Phone"/><span id="msg_phone"></span>                
+            </p>
+            <p>
+				<input type="button" id="txt_submit" value="Submit" onclick="SubmitForm()"/>
+            </p>
+                
+        </div>
+
+
+
+<script>
+
+function SubmitForm()
+{
+	
+		var name = document.getElementById("txt_name");	
+		var msg_name = document.getElementById("msg_name");	
+		var email = document.getElementById("txt_email");	
+		var password = document.getElementById("txt_password");	
+		var phone = document.getElementById("txt_phone");
+		var isValid = true;
+		
+		if(name.value == "")
+		{
+			msg_name.innerHTML = "Name is required";
+			msg_name.style.color = "red";			
+			isValid = false;
+		}else
+		{
+			name.parentNode.childNodes.item(2).innerHTML = "";
+		}
+		
+		if(email.value == "")
+		{
+			email.parentNode.childNodes.item(2).innerHTML = "Email is Required";
+			email.parentNode.childNodes.item(2).style.color = "red";			
+			isValid = false;
+		}else
+		{
+			email.parentNode.childNodes.item(2).innerHTML = "";
+		}
+		
+		if(password.value == "")
+		{
+			password.parentNode.childNodes.item(2).innerHTML = "Password is Required";
+			password.parentNode.childNodes.item(2).style.color = "red";			
+			isValid = false;
+		}else
+		{
+			password.parentNode.childNodes.item(2).innerHTML = "";
+		}
+		if(phone.value == "")
+		{
+			phone.parentNode.childNodes.item(2).innerHTML = "Phone is Required";
+			phone.parentNode.childNodes.item(2).style.color = "red";			
+			isValid = false;
+		}else
+		{
+			phone.parentNode.childNodes.item(2).innerHTML = "";
+		}
+								
+	
+		if(isValid)
+		{
+			alert("Welcome");
+			
+		}
+	
+}
+
+</script>
+
+</body>
+</html>

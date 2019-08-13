@@ -1,0 +1,47 @@
+<html>
+<head>
+<style>
+p{padding:10px; border:1px solid #ccc; margin:5px}
+</style>
+</head>
+<body>
+<input type="text" id="txtNum" class="input-txt"/>
+<input type="button" id="btnClick" value="Click" onClick="CreateData();"/>
+
+<table id="table_container" border="1"></table>
+<div id="div_container"></div>
+
+<script>
+function CreateData()
+{	
+    var N = document.getElementById("txtNum").value;
+	
+	//Paragraph for Loop
+	var Container = document.getElementById("div_container");
+	var DATA_Container = "";
+	
+	for(var i = 1; i <= parseInt(N); i++)
+	{
+		DATA_Container += "<p>"+i+"</p>";
+	}	
+	Container.innerHTML = DATA_Container;
+	
+	//Table for Loop
+    var Table = document.getElementById("table_container");
+	DATA_Container = "";
+	
+	for(var i = 1; i <= parseInt(N); i++)
+	{
+		DATA_Container += "<tr>";				
+		
+		for(var j = 1; j <= parseInt(N); j++)
+		{
+			DATA_Container += "<td>"+j+"</td>";
+		}
+		DATA_Container += "</tr>";
+	}
+	Table.innerHTML = DATA_Container;
+}
+</script>
+</body>
+</html>

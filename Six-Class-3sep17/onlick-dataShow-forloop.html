@@ -1,0 +1,26 @@
+<html>
+<head>
+<style>
+p{ padding:10px; margin:10px; border:1px solid #ccc;}
+</style>
+</head>
+<body>
+
+<input type="button" value="Show" onClick="dataShow()"/>
+<div id="box"></div>
+
+<script>
+function dataShow()
+{
+	var abc = document.getElementById("box");
+	var data = "";
+	for(var i = 1; i <= 10; i++)
+	{		
+		data += "<p>"+i+"</p>";
+    	
+	}
+	abc.innerHTML = data;	
+}
+</script>
+</body>
+</html>

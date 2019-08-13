@@ -1,0 +1,113 @@
+<html>
+
+<head>
+
+<script type="text/javascript">
+
+function test1() {
+
+alert('test1');
+
+}
+
+function test2(){
+
+alert('test2');
+
+}
+
+function hideShow(ctrl)
+{
+	//alert(ctrl.id);
+
+	var c = ctrl.id; // h_1
+	var nid = c.replace('h','c'); // c_1
+	//alert(nid);
+
+
+	var eid = c.replace('h','s'); // s_1
+
+	document.getElementById("c_1").style.display="none";
+	document.getElementById("c_2").style.display="none";
+	document.getElementById("c_3").style.display="none";
+
+	document.getElementById("s_1").value="+";
+	document.getElementById("s_2").value="+";
+	document.getElementById("s_3").value="+";
+
+
+	
+	//alert(document.getElementById('hd').value);
+	
+	if(document.getElementById('hd').value == "0"){
+	
+	document.getElementById(nid).style.display="block";
+	document.getElementById(eid).value="-";
+	
+	document.getElementById('hd').value = "1";
+	
+	//alert(0);
+	
+	}
+	else
+	{
+		//alert(1);	
+	
+		document.getElementById(nid).style.display="none";
+		document.getElementById(eid).value="+";
+	
+		document.getElementById('hd').value = "0";
+		
+	
+	}
+	//document.getElementById(eid).innerHTML="<img /> ";
+	//document.getElementById(eid).style=""
+
+
+}
+</script>
+
+</head>
+<body>
+
+
+<input type="hidden" id="hd" value="0" />
+
+
+<div id="h_1" style="background-color:blue;border:1px solid red;"
+onclick="hideShow(this);">
+<input type="submit" id="s_1" value="+" />  A
+</div>
+
+<div id="c_1" style="border:1px solid red;min-height:100px;display:none;">
+
+AAAAA
+sklhks skhs
+
+</div>
+
+<div id="h_2" onClick="hideShow(this);" style="background-Color:blue;border:1px solid red;">
+<input type="submit" id="s_2" value="+" />B
+</div>
+
+<div id="c_2" style="border:1px solid red;min-height:100px;display:none;">
+
+BBBBBBB
+sklhks skhs
+
+</div>
+
+<div id="h_3" onClick="hideShow(this);" style="background-Color:blue;border:1px solid red;">
+<input type="submit" id="s_3" value="+" />C
+</div>
+
+<div id="c_3" style="border:1px solid red;min-height:100px;display:none;">
+
+CCCCC
+sklhks skhs
+
+</div>
+
+
+</body>	
+</html>

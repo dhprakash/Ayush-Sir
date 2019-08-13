@@ -1,0 +1,39 @@
+<html>
+<head>
+<style>
+p{ padding:10px; margin:10px; border:1px solid #ccc;}
+</style>
+</head>
+<body>
+<input type="button" value="create" onClick="TriggerP();"/>
+<div id="container"></div>
+
+<script>
+
+var t; // Global Scope
+
+function TriggerP()
+{
+	var i = 1;
+	t = setInterval(function(){ CreateP(i++); }, 500);					
+}
+
+function CreateP(inc)
+{
+	if(inc == 10)
+	{
+		clearInterval(t);
+	}
+	console.log(inc);
+	var container = document.getElementById("container");
+	var data = "";
+	for(var i = 1; i <= inc; i++)
+	{
+		data += "<p>"+i+"</p>";
+    	container.innerHTML = data;
+	}		
+}
+
+</script>
+</body>
+</html>

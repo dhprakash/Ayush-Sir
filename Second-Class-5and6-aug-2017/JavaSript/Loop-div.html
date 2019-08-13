@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	</head>
+<body>
+
+<div id="xyz" style="border: 1px solid #333; width: 400px; padding: 10px;"></div>
+
+<script type="text/javascript">
+
+	var xyz = document.getElementById("xyz");
+	var data = "";
+	for(i = 0; i < 5; i++)
+	{
+			data += "<p style='border-bottom:1px solid #ccc;'>"+i+" = This is line for div</p>";
+	}
+
+	xyz.innerHTML = data;
+
+
+</script>
+
+</body>
+</html>

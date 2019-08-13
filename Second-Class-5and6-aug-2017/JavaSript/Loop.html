@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	</head>
+<body>
+
+<script type="text/javascript">
+
+     
+
+        // Loop - for, while, do while
+
+        for(var i = 0; i < 5; i++)
+        {
+                document.write(i+"<br/>");
+        }
+        
+        document.write("<hr/><br/>");
+
+        for(var i = 1; i <= 10; i++)
+        {
+                document.write((i*2)+"<br/>");
+        }
+
+        document.write("<hr/><br/>");
+
+        for(var i = 1; i <= 100; i++)
+        {
+
+                if((i % 2) != 0)
+                {
+                        document.write(i+"<br/>");
+                }
+        }
+
+        document.write("<hr/><br/>");
+
+        for(var i = 200; i >= 1; i--)
+        {
+           document.write(i+"<br/>");
+        }
+
+        document.write("<hr/><br/>");
+		
+		
+		
+
+        // while
+        var i = 11;
+        while(i <= 10)
+        {
+            document.write((i*3)+"<br/>");
+            i++;
+        }
+
+        document.write("<hr/><br/>");
+
+        i = 10;
+
+        do
+        {
+
+                document.write(i+"<br/>");
+                i++;
+        }while(i < 5);
+
+
+
+
+
+        var container = document.getElementById("container");
+        var data = "";
+        for(i = 0; i < 20; i++)
+        {
+                data += "<p style='padding:10px; border-bottom:1px solid #ccc; margin-bottom:10px'>"+i+"</p>";
+        }
+
+        container.innerHTML = data;
+		
+		
+		
+		
+		
+
+        // nested loops
+
+        for(i = 0; i < 5; i++)
+        {
+                for(var j = 0; j <= i; j++)
+                {
+                        document.write("*");
+                }
+                document.write("<br/>");
+        }
+
+       
+        </script>
+
+</body>
+</html>

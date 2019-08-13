@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title></title>
+	<style type="text/css">
+		* {	margin: 0px; padding: 0px}
+		table tr td { text-align: center; font-size: 30px;	font-weight: bold;}
+	</style>
+	</head>
+	<body>
+<div style="width:300px; margin:0 auto">
+      <table style="border-collapse: collapse; border:1px solid #ccc; width: 100%" border="1" >
+    <tr>
+          <td colspan="4"><p style="padding: 20px; text-align: right; font-weight: bold; font-size: 40px; color: blue" id="container">0</p></td>
+        </tr>
+    <tr>
+          <td onclick="AddDataToContainer(this);">7</td>
+          <td onclick="AddDataToContainer(this);">8</td>
+          <td onclick="AddDataToContainer(this);">9</td>
+          <td onclick="AddDataToContainer(this);">*</td>
+        </tr>
+    <tr>
+          <td onclick="AddDataToContainer(this);">4</td>
+          <td onclick="AddDataToContainer(this);">5</td>
+          <td onclick="AddDataToContainer(this);">6</td>
+          <td onclick="AddDataToContainer(this);">/</td>
+        </tr>
+    <tr>
+          <td onclick="AddDataToContainer(this);">1</td>
+          <td onclick="AddDataToContainer(this);">2</td>
+          <td onclick="AddDataToContainer(this);">3</td>
+          <td onclick="AddDataToContainer(this);">-</td>
+        </tr>
+    <tr>
+          <td onclick="ClearContainerData();">c</td>
+          <td onclick="AddDataToContainer(this);">0</td>
+          <td onclick="AddDataToContainer(this);">.</td>
+          <td onclick="AddDataToContainer(this);">+</td>
+        </tr>
+    <tr>
+          <td colspan="4" onclick="CalculateValues()">=</td>
+        </tr>
+  </table>
+    </div>
+<script type="text/javascript">
+	
+function AddDataToContainer(ELE)
+{
+	var container = document.getElementById("container");
+	container.innerHTML += ELE.innerHTML;
+}
+
+function ClearContainerData()
+{
+	document.getElementById("container").innerHTML = 0 ;
+}
+
+function CalculateValues()
+{
+	var calc_data = document.getElementById("container");
+
+	console.log(calc_data.innerHTML.indexOf("-"));
+
+	if(calc_data.innerHTML.indexOf("+") != -1)
+	{
+		var splited_data = calc_data.innerHTML.split("+");
+
+
+		if(calc_data.innerHTML.indexOf(".") != -1)
+		{
+			calc_data.innerHTML = parseFloat(splited_data[0]) + parseFloat(splited_data[1]);
+		}else
+		{
+			calc_data.innerHTML = parseInt(splited_data[0]) + parseInt(splited_data[1]);
+		}
+
+	}else if(calc_data.innerHTML.indexOf("-") != -1)
+	{
+		var splited_data = calc_data.innerHTML.split("-");
+
+		calc_data.innerHTML = parseInt(splited_data[0]) - parseInt(splited_data[1]);
+
+	}else if(calc_data.innerHTML.indexOf("/") != -1)
+	{
+		var splited_data = calc_data.innerHTML.split("/");
+
+		calc_data.innerHTML = parseInt(splited_data[0]) / parseInt(splited_data[1]);
+
+	}else if(calc_data.innerHTML.indexOf("*") != -1)
+	{
+		var splited_data = calc_data.innerHTML.split("*");
+
+		calc_data.innerHTML = parseInt(splited_data[0]) * parseInt(splited_data[1]);
+
+	}
+}
+
+</script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<html>
+<head>
+	<title></title>
+	<style>
+		div { width: 50px; height: 50px; line-height: 50px; border: #666 solid 1px; text-align: center; font-size: 20px; display: inline-block; margin: 5px; float: left;}
+	</style></head>
+<body>
+
+	<div id="hour">00</div>	
+	<div id="minute">00</div>
+	<div id="second">00</div>
+
+	<script type="text/javascript">
+	
+		var secondbox = document.getElementById('second');
+		var minutebox = document.getElementById('minute');
+		var hourbox = document.getElementById('hour');
+		var second = 0;
+		var minute = 0;
+		var hour = 0;
+
+		function timerStart(){
+		setInterval(clock, 1000);
+
+		}
+		timerStart();
+
+		function clock() {
+
+			second++;
+			secondbox.innerHTML = second;
+
+			if(second==60) {
+				minute++;
+				minutebox.innerHTML = minute;
+				second = 0;
+			}
+
+			if(minute==60) {
+				hour++;
+				hourbox.innerHTML = hour;
+				minute = 0;
+			}
+
+		}
+		
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<html>
+<head>
+<style>
+p{padding:10px; border:1px solid #ccc; margin:5px}
+</style>
+</head>
+
+<body>
+<input type="text" id="input" />
+
+<input type="button" value="Click" onClick="ShowData();" />
+
+<table id="table" border="1" width="50%"></table>
+
+<script>
+function ShowData()
+{	
+    var abc = document.getElementById("input").value;
+    var Table = document.getElementById("table");
+	data = "";
+	
+	for(var i = 1; i <= parseInt(abc); i++)
+	{
+		data += "<tr>";				
+		
+		for(var j = 1; j <= parseInt(abc); j++)
+		{
+			data += "<td>"+j+"</td>";
+		}
+		data += "</tr>";
+	}
+	Table.innerHTML = data;
+}
+</script>
+</body>
+</html>

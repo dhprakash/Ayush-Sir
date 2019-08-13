@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body>
+
+<script type="text/javascript">
+
+         // functions
+        // 1. no param no return
+        // 2. with param no return
+        // 3. no param with return
+        // 4. with param with return
+		
+
+         // 2. with param no return
+		
+        function GetUserMessage(MSG)
+        {
+                document.write(MSG);
+        }
+
+        GetUserMessage("Hello User how you doing today?");
+		
+		
+		 // 3. no param with return
+		
+        function getSum()
+        {
+                var a = 10;
+                var b = 55;
+
+                return (a + b);
+        }
+        
+        var SUM = getSum();
+        document.write(SUM);
+		
+		
+		// 4. with param with return
+		
+		function IsUserEligibleForVote(AGE)
+        {
+                var result;
+                if(AGE >= 18)
+                {
+                        result = true;
+                }else
+                {
+                        result = false;
+                }
+
+                return result;
+        }
+
+        document.write(IsUserEligibleForVote(18));
+        var RESULT = IsUserEligibleForVote(18);
+        var MESSAGE = (RESULT == true ? "Yes you are eligible" : "You are not eligible");
+
+        document.write(MESSAGE);
+        </script>
+
+</body>
+</html>

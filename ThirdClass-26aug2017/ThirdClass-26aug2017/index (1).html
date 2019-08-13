@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Events & DOM (Document Object Model)</title>
+</head>
+<body>
+
+<input type="button" value="GetData" onclick="ReadData()">
+<!--<input type="text" id="" onfocus="ReadData()">
+<input type="text" id="" onblur="ReadData()">-->
+<input type="text" id="" onkeyup="ReadData()">
+<select onchange="ReadData()">
+	<option value="0" selected="selected">Select Country</option>
+	<option value="1">India</option>
+	<option value="2">Nepal</option>
+
+</select>
+
+<hr/>
+<br/>
+
+<input type="text" id="txt_UserData">
+<input type="button" value="GetData" onclick="GetDataOnArray()">
+<ul>
+	
+	<li>L1</li>
+	<li>L2</li>
+	<li>L3</li>
+	<li>L4</li>
+	<li>L5</li>
+	<li>L6</li>
+
+</ul>
+
+
+<script type="text/javascript">
+	
+function ReadUserData()
+{
+	// By ID
+	// By TagName
+	// By ClassName
+		// Query
+		// QueryAll
+	 var UD = document.getElementById("txt_UserData").value;
+	 console.log(UD);
+
+	 var Tags = document.getElementsByTagName("li");
+	 
+
+	 for(var i = 0; i < Tags.length; i++)
+	 {
+		console.log(Tags[i].innerHTML);
+	 }
+}
+
+
+function ReadData()
+{
+
+//	console.log("called");
+
+
+
+
+}
+
+
+function GetDataOnArray()
+{
+
+	var stu1 = "AYUSH";
+	var stu2 = "AYUSH";
+	var stu3 = "AYUSH";
+	var stu4 = "AYUSH";
+
+	var ArData = Array();
+
+	ArData[0] = "A1";
+	ArData[1] = "A2";
+	ArData[2] = "A3";
+	ArData[3] = "A4";
+	ArData[4] = "A5";
+
+	
+
+
+	for(var i = 0; i < ArData.length; i++)
+	{
+		console.log(ArData[i]);
+	}
+
+
+	var CAR = {name:"BENZ", color:["RED","GREEN","BLACK"]};
+
+	console.log(CAR.color);
+
+}
+
+
+
+
+</script>
+
+</body>
+</html>

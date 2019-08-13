@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<style>
+#container{ height:450px; width:650px; margin:20px auto; position:relative;}
+#img{ height:450px; width:650px; position:absolute;}
+#left_holder{ height:450px; width:100px; position:absolute; left:8px; top:8px;}
+#right_holder{ height:450px; width:100px; position:absolute; right:8px; top:8px;}
+
+.left{ height:50px; width:50px; position:absolute; left:8px; top:48%;}
+.right{ height:50px; width:50px; position:absolute; right:8px; top:48%;}
+
+</style>
+<script type="text/javascript">
+var imagecount = 1;
+var total = 3;
+
+function slide(x){
+	var Image = document.getElementById('img');
+	imagecount = imagecount + x;
+	if(imagecount > total){ imagecount = 1;}
+	if(imagecount < 1){ imagecount = total;}
+	Image.src = "Images/img" + imagecount + ".jpg"
+	}
+window.setInterval(
+
+function slideA(){
+	var Image = document.getElementById('img');
+	imagecount = imagecount + 1;
+	if(imagecount > total){ imagecount = 1;}
+	if(imagecount < 1){ imagecount = total;}
+	Image.src = "Images/img" + imagecount + ".jpg"
+	},2000);	
+</script>
+</head>
+
+<body onload="slideA()">
+<div id="container">
+<img src="Images/img1.jpg" id="img" />
+<div id="left_holder"><img onclick="slide(-1)" src="Images/arrow_left.jpg" class="left" /></div>
+<div id="right_holder"><img onclick="slide(1)" src="Images/arrow_right.jpg" class="right" /></div>
+</div>
+</body>
+</html>

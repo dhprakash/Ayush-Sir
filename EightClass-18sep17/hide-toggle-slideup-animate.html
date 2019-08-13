@@ -1,0 +1,85 @@
+<html>
+<head>
+
+<!--
+         	JQuery - $ and jquery
+            is an extension to JavaScript(JS) and is a library
+            
+            dev, prod
+			https://code.jquery.com/jquery-1.7.2.js, https://code.jquery.com/jquery-1.7.2.min.js
+            
+            use
+            local - 
+            CDN - cached/content delivery network (R)
+            
+            
+            selector | action
+            
+            element [div, p, ul li ...]
+            CSS_ClassName .className
+            ID #ID
+            .className ul li
+            *
+-->
+<style>
+*{	margin:0px;	padding:0px;	}
+.p{padding:4px 10px; text-align:center; border-radius:4px; width:200px; background:yellow; color:#333}
+.div{ background:orange; width:300px; height:300px; border:1px solid red;}
+div{padding-left:10px}
+.bdr{ border:2px solid #333;	}
+</style>
+</head>
+<body>
+
+<p class="p">Click Here</p>
+<div class="div"></div>
+
+
+
+<script src="https://code.jquery.com/jquery-1.7.2.min.js" type="text/javascript"></script>
+
+<script>
+
+$(document).ready(function(){
+	
+
+		$("p").click(function(){
+			
+			//$("div").hide();
+			//$("div").toggle();
+			//$("div").toggle(2000);
+			//$("div").slideUp();
+			//$("div").slideDown();
+			//$("div").slideToggle(2000);
+			//$("div").show();
+			
+			// animate
+			// property, delay, callback
+			
+			$("div").animate({"margin-left":"+=300px"},2000, function(){
+			
+				$("div").animate({"margin-top":"+=300px"},2000, function(){
+				
+					$("div").animate({"margin-left":"-=300px"},2000, function(){
+				
+						$("div").animate({"margin-top":"-=300px"},2000, function(){
+					
+							alert("done");
+						
+						});
+					
+					});
+					
+				});
+				
+			});
+			
+			// p click end			
+															
+		 });
+		 
+});
+
+</script>
+</body>
+</html>

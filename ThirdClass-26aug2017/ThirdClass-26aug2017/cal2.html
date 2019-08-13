@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>JS Calc</title>
+
+<style>
+@import url(http://fonts.googleapis.com/css?family=Dosis);
+body
+{
+background:#FCFCFC;
+font-family: 'Dosis', sans-serif;
+}
+.wrapper
+{
+	width:900px;
+	margin:0 auto;
+}
+.wrapper h1{text-align:center; border-bottom:1px solid #bbb; padding-bottom:10px; margin:30px auto;width:450px; }
+.calc
+{
+	width:450px; border:1px solid #bbb; margin:0 auto; box-shadow:1px 2px 3px #A8A3A3; background:#ccc; border-radius:4px; padding-bottom:0.5px
+}
+.result{background:rgb(186, 186, 186); height:50px; font-size:40px; text-align:right; padding:15px 15px 15px 5px; color:#fff; letter-spacing:4px; overflow:hidden}
+.button{}
+.row1 {margin-top:3px}
+.row1 div{padding:15px; background:#e6e6e6; text-align:center; display:inline-block; font-size:20px; width:80px; cursor:pointer}
+.row1 div:first-child{background:#B0E5DB; width:193px}
+.row1 div:last-child{background:#FFD07B;}
+.row2 {border-top:1px solid #bbb; margin-top:2px}
+.row2 div{padding:15px; background:#e6e6e6; text-align:center; display:inline-block; font-size:20px; width:80px;cursor:pointer}
+.row2 div:last-child{background:#FFD07B;}
+.nobg{background:#e6e6e6 !important;}
+</style>
+
+<script type="text/javascript" >
+var Data = "";
+function resultdata(val)
+{
+	document.getElementById("result").innerHTML += val.innerHTML;
+}
+function clean()
+{
+	document.getElementById("result").innerHTML = "";
+}
+function calculation()
+{
+	var calc_data = document.getElementById("result").innerHTML;
+	
+	
+	if(calc_data.indexOf("/") != -1)
+	{
+		var cal_d = calc_data.split('/');
+		
+		document.getElementById("result").innerHTML = (cal_d[0] / cal_d[1]);
+	}
+	
+	if(calc_data.indexOf("%") != -1)
+	{
+		var cal_d = calc_data.split('%');
+		
+		document.getElementById("result").innerHTML = (cal_d[0] % cal_d[1]);
+	}
+	
+	if(calc_data.indexOf("X") != -1)
+	{
+		var cal_d = calc_data.split('X');
+		
+		document.getElementById("result").innerHTML = (cal_d[0] * cal_d[1]);
+	}
+	
+	if(calc_data.indexOf("-") != -1)
+	{
+		var cal_d = calc_data.split('-');
+		
+		document.getElementById("result").innerHTML = (cal_d[0] - cal_d[1]);
+	}
+	
+	if(calc_data.indexOf("+") != -1)
+	{
+		var cal_d = calc_data.split('+');
+		
+		document.getElementById("result").innerHTML = (parseInt(cal_d[0]) + parseInt(cal_d[1]));
+	}
+	
+}
+</script>
+
+</head>
+
+<body>
+
+<div class="wrapper">
+<h1>Welcome to JS Calc Application</h1>
+
+<div class="calc">
+<div class="result" id="result"> </div>
+
+<div class="button">
+
+<div class="row1"> 
+	<div onclick="clean();">C</div>
+	<div onclick="resultdata(this);">%</div>
+	<div onclick="resultdata(this);">/</div>
+
+
+</div>
+
+<div class="row2"> 
+	<div onclick="resultdata(this);">7</div>
+	<div onclick="resultdata(this);">8</div>
+	<div onclick="resultdata(this);">9</div>
+	<div onclick="resultdata(this);">X</div>
+</div>
+
+<div class="row2"> 
+	<div onclick="resultdata(this);">4</div>
+	<div onclick="resultdata(this);">5</div>
+	<div onclick="resultdata(this);">6</div>
+	<div onclick="resultdata(this);">-</div>
+</div>
+
+<div class="row2"> 
+	<div onclick="resultdata(this);">1</div>
+	<div onclick="resultdata(this);">2</div>
+	<div onclick="resultdata(this);">3</div>
+	<div onclick="resultdata(this);">+</div>
+</div>
+<div class="row1"> 
+	<div class="nobg" onclick="calculation();">=</div>
+	<div onclick="resultdata(this);">0</div>
+	<div onclick="resultdata(this);">.</div>
+
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+<html>
+<head>
+<style>
+*{	margin:0px;	padding:0px;	}
+div{padding-left:10px}
+.bdr{ border:2px solid #333;	}
+</style>
+</head>
+<body>
+
+<div>
+DIV
+    <p>P</p>
+    <div>
+    DIV
+        <ul>
+        UL
+            <li>LI
+                <span class="spn">SPAN</span>
+            </li>
+            <li>LI</li>
+            <li>LI</li>
+            <li>LI</li>
+        </ul>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-1.7.2.min.js" type="text/javascript"></script>
+
+<script>
+
+$(document).ready(function(){
+	
+		  // parent
+		 // parents
+		 // parentsUntil
+		 // siblings
+
+		$("li").click(function(){
+		
+			//$(this).parent().addClass("bdr");
+			//$(this).parents().addClass("bdr");
+			//$(this).parentsUntil("div").addClass("bdr");
+			$(this).siblings().addClass("bdr");			
+		});
+});
+
+</script>
+</body>
+</html>

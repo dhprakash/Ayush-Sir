@@ -1,0 +1,46 @@
+<html>
+<head>
+<style>
+*{	margin:0px;	padding:0px;	}
+div{padding-left:10px}
+.bdr{ border:2px solid #333;	}
+</style>
+</head>
+<body>
+
+<input type="button" id="ol" value="CLICK"/>
+<ol style="margin-left:100px">
+<li>OLD</li>
+<li>OLD</li>
+<li>OLD</li>
+<li>OLD</li>
+<li>OLD</li>
+</ol>
+
+<script src="https://code.jquery.com/jquery-1.7.2.min.js" type="text/javascript"></script>
+
+<script>
+
+$(document).ready(function(){
+	
+		 // traversing
+		 
+		 // append
+		 // prepend
+		 // after
+		 // before
+
+		
+		$("#ol").click(function(){
+		
+			//$("ol").append("<li>NEW</li>");	
+			//$("ol").prepend("<li>NEW</li>");	
+			//$("ol").before("<li>NEW</li>");	
+			$("ol").after("<li>NEW</li>");	
+			
+		});
+});
+
+</script>
+</body>
+</html>

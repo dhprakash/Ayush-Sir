@@ -1,0 +1,59 @@
+<html>
+<head>
+<title>Accordian</title>
+<style type="text/css">
+		*{margin: 0px; padding: 0px}
+		body{background-color: #f2f2f2;	font-family: calibri;}
+		
+		.accordian-container{padding: 20px;	margin: 100px auto;	width: 400px;background-color: #fff;box-shadow: 1px 2px 3px #ccc;border-radius: 4px;}
+
+		.box{margin-bottom: 10px; border: 1px solid #bbb;}
+		.box h1{padding: 10px; border-bottom: 1px solid #333}
+		.box h1 span{    float: right; color: orange;}
+		.box div{padding: 10px; display: none}
+	</style>
+</head>
+<body>
+<div class="accordian-container">
+  <div class="box">
+    <h1>jQuery Development <span>+</span></h1>
+    <div> Sublime Text may be downloaded and evaluated for free, however a license must be purchased for continued use.
+      
+      Licenses are per-user, rather than per-machine, so you can enjoy Sublime Text on as many computers and operating systems as you wish with your license. More… </div>
+  </div>
+  <div class="box">
+    <h1>jQuery Development 2 <span>+</span></h1>
+    <div> Sublime Text may be downloaded and evaluated for free, however a license must be purchased for continued use.
+      
+      Licenses are per-user, rather than per-machine, so you can enjoy Sublime Text on as many computers and operating systems as you wish with your license. More… </div>
+  </div>
+  <div class="box">
+    <h1>jQuery Development 3 <span>+</span></h1>
+    <div> Sublime Text may be downloaded and evaluated for free, however a license must be purchased for continued use.
+      
+      Licenses are per-user, rather than per-machine, so you can enjoy Sublime Text on as many computers and operating systems as you wish with your license. More… </div>
+  </div>
+  <div class="box">
+    <h1>jQuery Development 4 <span>+</span></h1>
+    <div> Sublime Text may be downloaded and evaluated for free, however a license must be purchased for continued use.
+      
+      Licenses are per-user, rather than per-machine, so you can enjoy Sublime Text on as many computers and operating systems as you wish with your license. More… </div>
+  </div>
+</div>
+<script src="https://code.jquery.com/jquery-1.7.2.min.js" type="text/javascript"></script> 
+<script type="text/javascript">
+
+		$(document).ready(function(){
+
+			$(".box h1").click(function(){
+
+				$(this).parent().find("div").slideToggle(100);
+				$(this).find("span").text(($(this).find("span").text() == "+" ? "-" : "+"));
+				// var TEXT = $(this).find("span").text(); // read value
+				// $(this).find("span").text("Hey"); // Assign value
+				// alert(TEXT);
+			});
+		});
+		</script>
+</body>
+</html>

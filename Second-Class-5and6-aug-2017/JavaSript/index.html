@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	</head>
+<body>
+
+<div id="container" style="border: 1px solid #333; width: 400px; padding: 20px;"></div>
+
+
+
+
+<script type="text/javascript">
+
+        // functions
+        // 1. no param no return
+        // 2. with param no return
+        // 3. no param with return
+        // 4. with param with return
+
+        function GetAllData()
+        {
+
+                alert("Hello");
+                document.write("Hey<br/>");
+                window.alert("Hello");
+                console.log("Hey");
+
+                // variable - is a temp location where we can store data on runtime
+                // AZaz_
+
+                var NAME = "ayush";
+
+        alert(NAME);
+
+        // if else
+        // switch
+        // ternary
+
+
+        var age = 78;
+
+        if(age >= 18)
+        {
+                        document.write("Yes you are eligible<br/>");
+
+                        if(age >= 65)
+                        {
+                                        document.write("Yes SR<br/>");
+                        }
+        }else
+        {
+                        document.write("No you are not eligible<br/>");
+        }
+
+        var n1 = 66, n2 = 77, n3 = 11;
+
+        if(n1 > n2 && n1 > n3)
+        {
+                document.write("N1 is greater");
+
+        }else if(n2 > n3)
+        {
+                document.write("N2 is greater");
+        }else
+        {
+                document.write("N3 is greater");
+        }
+
+
+
+        var day = 8;
+        switch(day)
+        {
+                case 1: { document.write("MON<br/>");break;}
+                case 2: { document.write("TUE<br/>");break;}
+                case 3: { document.write("WED<br/>");break;}
+                case 4: { document.write("THR<br/>");break;}
+                case 5: { document.write("FRI<br/>");break;}
+                case 6: { document.write("SAT<br/>");break;}
+                case 7: { document.write("SUN<br/>");break;}
+                default: { document.write("NO MATCH<br/>");break;}
+        }
+
+
+
+                // ternary operators - ayushkushwaha3@gmail.com
+        var option = 8768768;
+        var gender = (option == 1 ? "MALE" : "FEMALE");
+        document.write(gender);
+
+
+
+
+
+
+
+
+
+        document.write("Hi<br/>");
+
+        // Loop - for, while, do while
+
+
+        for(var i = 0; i < 5; i++)
+        {
+                document.write(i+"<br/>");
+        }
+        
+        document.write("<hr/><br/>");
+
+        for(var i = 1; i <= 10; i++)
+        {
+                document.write((i*2)+"<br/>");
+        }
+
+        document.write("<hr/><br/>");
+
+        for(var i = 1; i <= 100; i++)
+        {
+
+                if((i % 2) != 0)
+                {
+                        document.write(i+"<br/>");
+                }
+        }
+
+        document.write("<hr/><br/>");
+
+        for(var i = 200; i >= 1; i--)
+        {
+
+                        document.write(i+"<br/>");
+        }
+
+        document.write("<hr/><br/>");
+
+        // while
+        var i = 11;
+        while(i <= 10)
+        {
+            document.write((i*3)+"<br/>");
+            i++;
+        }
+
+        document.write("<hr/><br/>");
+
+        i = 10;
+
+        do
+        {
+
+                document.write(i+"<br/>");
+                i++;
+        }while(i < 5);
+
+
+
+
+
+        var container = document.getElementById("container");
+        var data = "";
+        for(i = 0; i < 20; i++)
+        {
+                data += "<p style='padding:10px; border-bottom:1px solid #ccc; margin-bottom:10px'>"+i+"</p>";
+        }
+
+        container.innerHTML = data;
+
+        // nested loops
+
+        for(i = 0; i < 5; i++)
+        {
+                for(var j = 0; j <= i; j++)
+                {
+                        document.write("*");
+                }
+                document.write("<br/>");
+        }
+
+        // DOM - Document Object Model
+        // by ID
+        // by className
+        // by Node
+        // by query
+        // by query all
+
+
+
+        }        
+
+        //GetAllData();
+        // type 2
+        function GetUserMessage(MSG)
+        {
+                document.write(MSG);
+        }
+
+        GetUserMessage("Hello User how you doing today?");
+
+
+        function getSum()
+        {
+                var a = 10;
+                var b = 55;
+
+                return (a + b);
+        }
+        
+        var SUM = getSum();
+        document.write(SUM);
+
+        function IsUserEligibleForVote(AGE)
+        {
+                var result;
+                if(AGE >= 18)
+                {
+                        result = true;
+                }else
+                {
+                        result = false;
+                }
+
+                return result;
+        }
+
+        document.write(IsUserEligibleForVote(18));
+        var RESULT = IsUserEligibleForVote(18);
+        var MESSAGE = (RESULT == true ? "Yes you are eligible" : "You are not eligible");
+
+        document.write(MESSAGE);
+        </script>
+
+</body>
+</html>

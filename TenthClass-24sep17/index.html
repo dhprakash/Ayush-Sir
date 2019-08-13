@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+<title>jQuery traversing filter</title>
+<style>
+  div,.newDivClass{
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+    float: left;
+    background: yellow;
+    border: 2px solid white;
+  }
+}
+</style>
+<script src="http://code.jquery.com/jquery-2.1.1.js"></script>
+</head>
+<body>
+<div></div>
+<div class="newDivClass"></div>
+<div class="newDivClass"></div>
+<div class="newDivClass1"></div>
+<div></div>
+ 
+<script>
+ $("div")
+  .css( "background", "yellow" )
+  .filter( ".newDivClass" )
+  .css( "border-color", "red" );
+</script>
+ 
+</body>
+</html>

@@ -1,0 +1,113 @@
+<html>
+<head>
+
+
+	<style>
+    
+	*{
+	
+	margin:0px;
+	padding:0px	
+		
+	}
+	
+	.box
+	{
+		
+		width:300px;
+		padding:20px;
+		margin:100px auto;
+		border:1px solid #ccc
+			
+		
+	}
+	
+	.box p input[type=text], .box p input[type=password], .box p input[type=email]{width:95%; padding:10px; margin-bottom:5px}
+	.box p span{padding-left:5px;}
+    </style>
+
+</head>
+
+
+<body>
+
+
+	
+		<div class="box">
+        
+            <p>
+				<input type="text" id="txt_name" placeholder="Name"/><span></span>                
+            </p>
+            
+            <p>
+				<input type="email" id="txt_email" placeholder="Email"/><span></span>                
+            </p>
+            
+            <p>
+				<input type="password" id="txt_password" placeholder="Password"/><span></span>                
+            </p>
+            
+            <p>
+				<input type="text" id="txt_phone"  placeholder="Phone"/><span></span>                
+            </p>
+            <p>
+				<input type="button" id="txt_submit" value="Submit" onclick="SubmitForm()"/>
+            </p>
+                
+        </div>
+
+
+
+<script>
+
+function SubmitForm()
+{
+	
+		var name = document.getElementById("txt_name");	
+		var email = document.getElementById("txt_email");	
+		var password = document.getElementById("txt_password");	
+		var phone = document.getElementById("txt_phone");
+		
+		
+		if(name.value == "")
+		{
+			name.parentNode.childNodes.item(2).innerHTML = "*";
+			name.parentNode.childNodes.item(2).style.color = "red";			
+		}else
+		{
+			name.parentNode.childNodes.item(2).innerHTML = "";
+		}
+		
+		if(email.value == "")
+		{
+			email.parentNode.childNodes.item(2).innerHTML = "*";
+			email.parentNode.childNodes.item(2).style.color = "red";			
+		}else
+		{
+			email.parentNode.childNodes.item(2).innerHTML = "";
+		}
+		
+		if(password.value == "")
+		{
+			password.parentNode.childNodes.item(2).innerHTML = "*";
+			password.parentNode.childNodes.item(2).style.color = "red";			
+		}else
+		{
+			password.parentNode.childNodes.item(2).innerHTML = "";
+		}
+		if(phone.value == "")
+		{
+			phone.parentNode.childNodes.item(2).innerHTML = "*";
+			phone.parentNode.childNodes.item(2).style.color = "red";			
+		}else
+		{
+			phone.parentNode.childNodes.item(2).innerHTML = "";
+		}
+								
+	
+}
+
+</script>
+
+</body>
+</html>
